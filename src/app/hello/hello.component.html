@@ -1,0 +1,14 @@
+<div class="container">
+  <h1>Nomes</h1>
+  <div class="btn-group">
+    <button
+      *ngFor="let name of names"
+      type="button"
+      class="btn"
+      [ngClass]="{ 'btn-selected': name === selectedName, 'btn': name !== selectedName }"
+      (click)="selectName(name)"
+    >
+      {{ name }}
+    </button>
+  </div>
+</div>
